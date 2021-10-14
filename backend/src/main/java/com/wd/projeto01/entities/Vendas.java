@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tb_venda")
 public class Vendas {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -21,14 +21,13 @@ public class Vendas {
 	private Integer qtdVendas;
 	private Double valor;
 	private LocalDate data;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "vendedor_id")
 	private Vendedor vendedor;
-	
-	
-	public Vendas() {}
 
+	public Vendas() {
+	}
 
 	public Vendas(Integer id, Integer visitas, Integer qtdVendas, Double valor, LocalDate data) {
 		super();
@@ -39,55 +38,44 @@ public class Vendas {
 		this.data = data;
 	}
 
-
 	public Integer getId() {
 		return id;
 	}
-
 
 	public void setId(Integer id) {
 		this.id = id;
 	}
 
-
 	public Integer getVisitas() {
 		return visitas;
 	}
-
 
 	public void setVisitas(Integer visitas) {
 		this.visitas = visitas;
 	}
 
-
 	public Integer getQtdVendas() {
 		return qtdVendas;
 	}
-
 
 	public void setQtdVendas(Integer qtdVendas) {
 		this.qtdVendas = qtdVendas;
 	}
 
-
 	public Double getValor() {
 		return valor;
 	}
-
 
 	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 
-
 	public LocalDate getData() {
 		return data;
 	}
 
-
 	public void setData(LocalDate data) {
 		this.data = data;
 	}
-		
-	
+
 }
