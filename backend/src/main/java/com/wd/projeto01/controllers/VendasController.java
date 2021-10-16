@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wd.projeto01.dto.VendasDto;
+import com.wd.projeto01.entities.Vendas;
 import com.wd.projeto01.services.VendasService;
 
 @RestController
@@ -18,16 +19,16 @@ import com.wd.projeto01.services.VendasService;
 public class VendasController {
 	
 	@Autowired
-	private VendasService servVendas;
+	private VendasService vendasService;
 	
 	@GetMapping
-	public ResponseEntity<List<VendasDto>> listarVendas(){
-		List<VendasDto> listaVendas = servVendas
+	public ResponseEntity<List<VendasDto>> buscarTodasVendas(){
+		List<VendasDto> vendas = vendasService
 				.findAll().stream()
-				.map(x -> new VendasDto(x.getId() , x.getVisitas(), x.getQtdVendas()))
+				.map(x -> new VendasDto(x.getId() , x.getVisitas(), x.getValor(), x.getVendedor().getNome()))
 				.collect(Collectors.toList());
 		
-		return  ResponseEntity.ok(listaVendas);
+		return  ResponseEntity.ok(vendas);
 		
 	}
 	
