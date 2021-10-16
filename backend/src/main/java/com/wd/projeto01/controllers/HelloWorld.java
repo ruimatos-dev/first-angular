@@ -15,7 +15,7 @@ public class HelloWorld {
 	
 	@GetMapping
 	public ResponseEntity<List<String>> helloWord(){
-		List<String> list = new ArrayList();
+		List<String> list = new ArrayList<String>();
 		
 		String nome = "Eu";
 		

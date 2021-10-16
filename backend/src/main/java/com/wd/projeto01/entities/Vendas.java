@@ -81,6 +81,7 @@ public class Vendas {
 	public Vendedor getVendedor() {
 		return this.vendedor;
 	}
+	
 	public void setVendedor(Vendedor vendedor) {
 		this.vendedor = vendedor;
 	}

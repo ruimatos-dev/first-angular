@@ -26,23 +26,49 @@ public class VendasDto {
 	public Integer getId() {
 		return id;
 	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
 	public Integer getVisitas() {
 		return visitas;
 	}
+	
 	public void setVisitas(Integer visitas) {
 		this.visitas = visitas;
 	}
+
+	public Integer getQtdVendas() {
+		return qtdVendas;
+	}
+	
+	public void setQtdVendas(Integer qtdVendas) {
+		this.qtdVendas = qtdVendas;
+	}
+
 	public Double getValor() {
 		return valor;
 	}
+
 	public void setValor(Double valor) {
 		this.valor = valor;
+	}
+	
+	public LocalDate getData() {
+		return data;
+	}
+
+	public void setData(LocalDate data) {
+		this.data = data;
 	}
 
 	public String getNomeVendedor() {
 		return nomeVendedor;
 	}	
+	
+	public void setNomeVendedor(String nomeVendedor) {
+		this.nomeVendedor = nomeVendedor;
+	}
+	
 }

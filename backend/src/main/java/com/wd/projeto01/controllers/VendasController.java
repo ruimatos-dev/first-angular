@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wd.projeto01.dto.VendasDto;
-import com.wd.projeto01.entities.Vendas;
 import com.wd.projeto01.services.VendasService;
 
 @RestController

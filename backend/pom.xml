@@ -12,7 +12,7 @@
 	<artifactId>projeto01</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>projeto01</name>
-	<description>Estudo com a galera da facul</description>
+	<description>Projeto para estudo Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
